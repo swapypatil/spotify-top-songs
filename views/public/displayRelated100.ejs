@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        
+        <title>Spotify Top Songs</title>
+        <link href="/public/static/logo.png" rel="icon">
+        
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <link href="public/css/style.css" type="text/css" rel="stylesheet">
+    
+    </head>
+
+    <body class="bg">
+        
+        <div class="col-sm-12 songTab vertical-center my-auto">
+
+                <p class="desc">Top 100 songs Related to <%= artist%></p><br>
+                <p>Related Artists : 
+                <% for(var i=0; i<artists.length; i++){ %>
+
+                    <% if(i != artists.length-1){ %>
+                        <%= artists[i][0]%>,&nbsp
+                    <% } else { %>
+                        <%= artists[i][0]%>.
+                    <% } %>
+
+                <% } %>
+                </p>
+
+                <table class="tableM">
+                    <tr class="trM">
+                        <th class="thM">No.</th>
+                        <th class="thM">Name</th>
+                        <th class="thM">Link</th>
+                    </tr>
+                    <% for(var i=0; i<songs.length; i++){ %>
+                    <tr class="trM">
+                        <td class="tdM"><%= songs[i][0]%></td>
+                        <td class="tdM"><%= songs[i][1]%></td>
+                        <td class="tdM"><a href="https://open.spotify.com/track/<%= songs[i][2]%>">Play</a></td>
+                    </tr>
+                    <% } %>
+                </table><br>
+                <!--<button class="button" style="margin-left: auto;margin-right: auto;">Make It a Playlist</button>-->
+                <!--<p class="foot">Made with <i class="fa fa-heart" style="color: red;"></i> by <a style="color: black; text-decoration: underline;" href="http://swapypatil.me/">Swapnajit Patil</a></p>-->
+               
+        </div>
+                    
+    </body>
+</html>

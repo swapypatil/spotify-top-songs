@@ -1,0 +1,54 @@
+<html>
+
+    <head>        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <title>Spotify Top Songs</title>
+        <link href="/public/static/logo.png" rel="icon">
+        
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <link href="public/css/style.css" type="text/css" rel="stylesheet">
+    
+    </head>
+
+    <body>
+
+        <div class="bg row container-fluid h-100">
+
+            <div class="col-lg-6 sub">
+                
+            </div>
+            
+            <div class="col-lg-6 vertical-center my-auto">
+                <img class="topBan" src="/public/static/logoH.png" />
+                <p class="desc">Listen to the Best songs of Your Favourite Artist based on Popularity</p>
+                <form>
+                    <table>
+                        <tr><td>
+                            <div class="group">
+                                <input type="text" name="artist" id="artist" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Artist Name</label>
+                            </div>
+                        </td></tr>
+                        <tr><td><button class="button" formaction="/getTop10"><span> Get Top 10 Tracks </span></button></td></tr>
+                        <tr><td><button class="button" formaction="/getRelated100"><span> Get Related 100 Tracks </span></button></td></tr>
+                    </table>
+                </form>
+                
+                <p class="foot">Made with <i class="fa fa-heart" style="color: red;"></i> by <a style="color: black; text-decoration: underline;" href="http://swapypatil.me/">Swapnajit Patil</a></p>
+               
+            </div>
+        
+        </div>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+
+</html>
