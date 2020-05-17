@@ -4,6 +4,7 @@ const app = express();
 
 const {getTop10} = require('./routes/getTop10');
 const {getRelated100} = require('./routes/getRelated100');
+const {addPlaylist} = require('./routes/addPlayList');
 
 var port = process.env.PORT || 8080;
 

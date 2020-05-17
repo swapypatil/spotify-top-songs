@@ -5,12 +5,7 @@
 	text-align: center;
 	background-color: #FEE140;
 	background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
-	
-	
-}
-
-.row {
-    height: 100%;
+	background-repeat: no-repeat;
 }
 
 .sub {
@@ -30,6 +25,7 @@
 
 .desc {
 	font-size: 30px;
+	margin: 20px;
 	font-family: 'Ubuntu';
 	text-decoration: solid;
 }
@@ -37,13 +33,14 @@
 .group { 
 	position:relative; 
 	margin-bottom: 10px; 
+	align-items: flex-end;
 }
 
 input {
 	font-size:18px;
 	padding:10px 10px 10px 5px;
 	display:block;
-	width:190%;
+	width:200%;
 	margin-left: 40px;
 	background-color: transparent;
 	border:none;
@@ -79,7 +76,7 @@ input:focus ~ label, input:valid ~ label {
 .bar { 
 	position:relative; 
 	display:block; 
-	width:190%; 
+	width:200%; 
 	margin-left: 40px;
 }
 
@@ -121,7 +118,8 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 	display: inline-block;
 	border-radius: 25px;
 	color: black;
-	background-color: aqua;
+	background-color: #52feff;
+	background-image: linear-gradient(315deg, #52feff 24%, #f300f1 90%);
 	border: none;
 	text-align: center;
 	font-size: 20px;
@@ -164,9 +162,10 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 }
 
 .foot {
-	position: fixed;
+	position: relative;
 	bottom: 0px;
-	margin-left: 230px;
+	margin-left: auto;
+	margin-right: auto;
 	font-family: 'Raleway';
 }
 
@@ -201,3 +200,14 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 	color: red;
 }
 
+@media (min-width: 768px) {
+    .h-md-100 { height: 100vh; }
+}
+
+@media (max-width: 768px){
+	.desc {font-size: 20px;}
+	input {width: 100%;}
+	.topBan {margin-top: 15px;}
+	.bar {width: 100%;}
+	.button { width: 150px; font-size: 10px;}
+}

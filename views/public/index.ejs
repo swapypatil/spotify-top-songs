@@ -2,8 +2,7 @@
 
     <head>        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         <title>Spotify Top Songs</title>
         <link href="/public/static/logo.png" rel="icon">
@@ -15,15 +14,15 @@
     
     </head>
 
-    <body>
+    <body class="bg">
 
-        <div class="bg row container-fluid h-100">
+        <!--<div class="bg row container-fluid h-100">
 
-            <div class="col-lg-6 sub">
+            <div class="col-lg-6 col-sm-12 col-md-6 sub">
                 
             </div>
             
-            <div class="col-lg-6 vertical-center my-auto">
+            <div class="col-lg-6 col-sm-12 col-md-6 vertical-center my-auto">
                 <img class="topBan" src="/public/static/logoH.png" />
                 <p class="desc">Listen to the Best songs of Your Favourite Artist based on Popularity</p>
                 <form>
@@ -40,15 +39,44 @@
                         <tr><td><button class="button" formaction="/getRelated100"><span> Get Related 100 Tracks </span></button></td></tr>
                     </table>
                 </form>
-                
                 <p class="foot">Made with <i class="fa fa-heart" style="color: red;"></i> by <a style="color: black; text-decoration: underline;" href="http://swapypatil.me/">Swapnajit Patil</a></p>
-               
             </div>
-        
+                
+        </div>-->
+
+        <div class="bg d-md-flex h-md-100 align-items-center">
+
+            <div class="sub col-md-6 col-sm-12 p-0 h-md-100">       
+            </div>
+            
+            <div class="bg col-md-6 col-sm-12 p-0 h-md-100">
+                <div class="d-md-flex flex-column align-items-center just h-md-100 justify-content-center">
+                    <img class="topBan" src="/public/static/logoH.png" />
+                    <p class="desc">Listen to the Best songs of Your Favourite Artist</p>
+                
+                    <div style="margin-right: auto;">
+                        <form>
+                            <table>
+                                <tr><td>
+                                    <div class="group">
+                                        <input type="text" name="artist" id="artist" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Artist Name</label>
+                                    </div>
+                                </td></tr>
+                                <tr><td><button class="button" formaction="/getTop10"><span> Get Top 10 Tracks </span></button></td></tr>
+                                <tr><td><button class="button" formaction="/getRelated100"><span> Get Related 100 Tracks </span></button></td></tr>
+                            </table>
+                        </form>
+                    </div>
+                    <p class="foot">Made with <i class="fa fa-heart" style="color: red;"></i> by <a style="color: black; text-decoration: underline;" href="http://swapypatil.me/">Swapnajit Patil</a></p>
+                    
+                </div>
+            </div>      
         </div>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    
     </body>
 
 </html>
